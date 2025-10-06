@@ -14,9 +14,9 @@ Requirements:
 
 Run the following to set up:
 
- ```sh
-nerm install
-copy .env.example ./env.local
+```sh
+npm install
+cp .env.example .env.local
 ```
 
 ## Usage
@@ -43,6 +43,22 @@ no-bluild
 - npm update --semints
 
 - vercel -- connect git, deploys automatically
+
+### Vercel CLI Installation
+
+Install the Vercel CLI globally with pnpm:
+
+```sh
+pnpm i -g vercel
+```
+
+If pnpm reports that it cannot locate the global bin directory, initialize pnpm's environment and retry:
+
+```sh
+SHELL=/bin/bash pnpm setup
+source "$HOME/.bashrc"
+pnpm i -g vercel
+```
 
 - ci/cdt passes paysef when green
 
