@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "rewries": [],
+  "redirects": [],
+  "cache": [    {
+      "path": "/",
+      "httpExpires": 0,
+      "staleDiscard": false
+    }
+  ],
+  "builds": [
+    {
+      "app": "next.js",
+      "create-command": "npm run build"
+    }
+  ],
+  "env": {
+    "production": {},
+    "preview": {"SEQUENCE_NAME": "preview-deploy"},
+    "development": {}
+  }
+}
