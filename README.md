@@ -1,9 +1,12 @@
 # repoops-v4-vercel
+**[](https://vercel.com/badge.svg?style=for-the-badge+login=vercel&label=Deployed&login=vercel&alias=false&app=repoops-v4-vercel-vwsj**
+
 \nFully automated and verified by RepoOps Engineer v4 vercel workflow bots.
 
 This repo links to a Vercel-backed automation flow to evaluate, refine, and deploy repositories safely.
 
 \n## Setup
+***Preview at: <https://repoops-v4-vercel-vwsj.vercel.app/**
 
 Requirements:
 - nde 18.10 or later
