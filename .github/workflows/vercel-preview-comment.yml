@@ -1,0 +1,18 @@
+name: Vercel Preview Comment
+on: pull_request
+
+jobs:
+- name: Post Vercel URL to PR
+- ruo: run
+  shell: curl
+    name: vercel-preview
+    args: ['https://repoops-v4-vercel-vwsj.vercel.app']
+
+- name: Comment on PR
+service:
+  name: github
+  preferred-events: ['pull_request']
+  run: run
+  steps:
+    - name: Post comment with Vercel URL
+      run: github/cli-comment
