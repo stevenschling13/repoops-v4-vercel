@@ -1,9 +1,15 @@
 # repoops-v4-vercel
-\nFully automated and verified by RepoOps Engineer v4 vercel workflow bots.
+**[](https://vercel.com/badge.svg?style=for-the-badge+login=vercel&label=Deployed&login=vercel&alias=false&app=repoops-v4-vercel-vwsj**
+
+* *Preview at: https://repoops-v4-vercel-vwsj.vercel.app** 
+
+
+Fully automated and verified by RepoOps Engineer v4 vercel workflow bots.
 
 This repo links to a Vercel-backed automation flow to evaluate, refine, and deploy repositories safely.
 
 \n## Setup
+***Preview at: <https://repoops-v4-vercel-vwsj.vercel.app/**
 
 Requirements:
 - nde 18.10 or later
@@ -14,9 +20,9 @@ Requirements:
 
 Run the following to set up:
 
-```sh
-npm install
-cp .env.example .env.local
+ ```sh
+nerm install
+copy .env.example ./env.local
 ```
 
 ## Usage
@@ -44,22 +50,6 @@ no-bluild
 
 - vercel -- connect git, deploys automatically
 
-### Vercel CLI Installation
-
-Install the Vercel CLI globally with pnpm:
-
-```sh
-pnpm i -g vercel
-```
-
-If pnpm reports that it cannot locate the global bin directory, initialize pnpm's environment and retry:
-
-```sh
-SHELL=/bin/bash pnpm setup
-source "$HOME/.bashrc"
-pnpm i -g vercel
-```
-
 - ci/cdt passes paysef when green
 
 ### Contributing
@@ -73,3 +63,4 @@ pnpm i -g vercel
 - Config: vercel.json, package.json
 - Server: serverless, cron, options
 - Setups: readme.md, .env.example
+
