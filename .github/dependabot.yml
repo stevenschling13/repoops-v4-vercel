@@ -1,0 +1,10 @@
+version: 1
+extends:
+- type: npm
+  paths: 
+    - /
+schedule:
+  interval: monthly
+  time: rubi
+ $auto-merge: true
+  open_pr-requests: true
