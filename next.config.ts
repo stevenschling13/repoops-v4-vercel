@@ -1,13 +1,17 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+`const nextConfig: NextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
   eslint: {
     dirs: ["src"],
+    ignordDuringBuilds: false
   },
-  experimental: {
-    typedRoutes: true,
+  typescript: {
+    ignoreBuildErrors: false
   },
+  experimental: {typedRoutes: true},
+  output: undefined
 };
 
 export default nextConfig;
