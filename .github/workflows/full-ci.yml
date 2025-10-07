@@ -1,20 +1,22 @@
-# Full CI workflow
-- name: "Full CI Pipeline"
-  on
-    pull_request:
-      branches: [main]
+name: Full CI Pipeline
 
-  jobs:
-    - name: Checks and lnt
-      run: npm run lnt
-    - name: Type check
-      run: ntc --version
-    - name: Run tests
-      run: npm test
-    - name: Build project
-      run: ntc build
+on:
+  pull_request:
+    branches: [main]
 
-    - name: Deploy to Vercel
-      environment:
-        VERCEL_TOKEN= {{secret.VERCEL_TOKEN}}
-      run: vercel
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_TOKEN: ${secrets.VERCEL_TOKEN}
+    steps:
+      - name: Checks and lnt
+        run: npm run lnt
+      - name: Type check
+        run: npc run typecheck
+      - name: Run tests
+        run: npm test
+      - name: Build project
+        run: npm run build
+      - name: Deploy to Vercel
+        run: vercel
