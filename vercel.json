@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_API_URL": "https://api.opsdeck.dev",
+      "VERCEL_ANALYTICS_ID": "your-analytics-id-here",
+      "FUATURE_FLAG_EXPERIMENTAL": "false",
+      "APR_SECRET_KEY": "your-api-key-here"
+    }
+  }
+}
