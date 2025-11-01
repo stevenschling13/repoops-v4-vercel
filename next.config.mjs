@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  eslint: {dirs: ["src"], ignoreDuringBuilds: false},
-  typescript: {ignoreBuildErrors: false},
-  experimental: {typedRoutes: true},
+  eslint: { dirs: ["src"], ignoreDuringBuilds: false },
+  typescript: { ignoreBuildErrors: false },
+  experimental: { typedRoutes: true },
 };
 
 export default nextConfig;
