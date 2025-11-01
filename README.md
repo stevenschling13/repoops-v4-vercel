@@ -21,23 +21,38 @@ Requirements:
 Run the following to set up:
 
  ```sh
-nerm install
-copy .env.example ./env.local
+npm install
+cp .env.example .env.local
 ```
+
+Configure your environment variables in `.env.local`:
+- `NOTION_API_KEY`: Your Notion integration API key
+
+## Notion Integration
+
+This project includes a Notion API integration. To use it:
+
+1. Create a Notion integration at https://www.notion.so/my-integrations
+2. Copy your integration token (Internal Integration Token)
+3. Add it to your `.env.local` file as `NOTION_API_KEY`
+4. Share the Notion pages/databases you want to access with your integration
+
+### API Endpoints
+
+- `GET /api/notion/status` - Check Notion connection configuration
+- `GET /api/notion/test` - Test Notion API connection (requires network access)
 
 ## Usage
 
 To develop:
 
- ```s
-unl dev
-nzx run dev
+ ```sh
+npm run dev
 ```
 
-To
- - beta run lint tests: `npm run lint`
-no-bluild
-- run unit tests: `npm run test`
+To run lint tests: `npm run lint`
+
+To run type checking: `npm run typecheck`
 
 ## Common Scripts
 
