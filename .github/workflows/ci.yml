@@ -1,8 +1,15 @@
 name: ci
+
 on: [pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
 jobs:
   node_ci:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -17,6 +24,8 @@ jobs:
     if: ${{ github.event_name == 'pull_request' && secrets.VERCEL_TOKEN != '' && secrets.VERCEL_ORG_ID != '' && secrets.VERCEL_PROJECT_ID != '' }}
     needs: node_ci
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     env:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}

@@ -41,23 +41,23 @@ export default function HomePage() {
         </p>
         <div className="flex flex-wrap gap-3 text-sm text-zinc-400">
           <span className="inline-flex items-center gap-2 rounded-full border border-zinc-800 px-3 py-1">
-            <span className="size-2 rounded-full bg-emerald-500" aria-hidden />
+            <span aria-hidden className="size-2 rounded-full bg-emerald-500" />
             Vercel ready
           </span>
           <span className="inline-flex items-center gap-2 rounded-full border border-zinc-800 px-3 py-1">
-            <span className="size-2 rounded-full bg-sky-500" aria-hidden />
+            <span aria-hidden className="size-2 rounded-full bg-sky-500" />
             Type-safe defaults
           </span>
           <span className="inline-flex items-center gap-2 rounded-full border border-zinc-800 px-3 py-1">
-            <span className="size-2 rounded-full bg-amber-500" aria-hidden />
+            <span aria-hidden className="size-2 rounded-full bg-amber-500" />
             Tailwind styling
           </span>
         </div>
       </header>
 
       <section aria-labelledby="resources-heading" className="grid gap-6 md:grid-cols-3">
-        <div className="md:col-span-3 flex flex-col gap-2">
-          <h2 id="resources-heading" className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">
+        <div className="flex flex-col gap-2 md:col-span-3">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500" id="resources-heading">
             Core resources
           </h2>
           <p className="text-sm text-zinc-400">
@@ -66,9 +66,9 @@ export default function HomePage() {
         </div>
         {resources.map((resource) => (
           <Link
-            key={resource.href}
-            href={resource.href}
             className="group flex flex-col gap-3 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 transition hover:border-zinc-500 hover:bg-zinc-900/80"
+            href={resource.href}
+            key={resource.href}
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -87,7 +87,7 @@ export default function HomePage() {
         className="grid gap-8 rounded-3xl border border-zinc-800 bg-zinc-900/30 p-8 md:grid-cols-[1.2fr_1fr]"
       >
         <div className="flex flex-col gap-4">
-          <h2 id="rollout-heading" className="text-2xl font-semibold text-zinc-100">
+          <h2 className="text-2xl font-semibold text-zinc-100" id="rollout-heading">
             Operational rollout checklist
           </h2>
           <p className="text-sm text-zinc-400">
@@ -95,7 +95,7 @@ export default function HomePage() {
           </p>
           <ol className="space-y-3 text-sm text-zinc-300">
             {rolloutChecklist.map((item, index) => (
-              <li key={item} className="flex items-start gap-3">
+              <li className="flex items-start gap-3" key={item}>
                 <span className="mt-0.5 inline-flex size-6 items-center justify-center rounded-full border border-emerald-400 text-xs font-semibold text-emerald-300">
                   {index + 1}
                 </span>
@@ -111,8 +111,8 @@ export default function HomePage() {
             advice. Tailor the configuration and lint rules to match your team&apos;s conventions.
           </p>
           <Link
-            href="https://github.com/stevenschling13/repoops-v4-vercel"
             className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-emerald-950 transition hover:bg-emerald-400"
+            href="https://github.com/stevenschling13/repoops-v4-vercel"
             rel="noreferrer noopener"
             target="_blank"
           >
