@@ -29,7 +29,6 @@ export async function GET() {
         message: "Notion client initialized successfully",
         configured: true,
         apiKeyPresent: !!apiKey,
-        apiKeyPrefix: apiKey.substring(0, 10) + "...",
       },
       { status: 200 }
     );

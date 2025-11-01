@@ -18,7 +18,8 @@ export function getNotionClient(): Client {
 }
 
 /**
- * Test the Notion connection by retrieving the authenticated user
+ * Test the Notion connection by listing users in the workspace
+ * Note: This requires the integration to have user read permissions
  */
 export async function testNotionConnection(): Promise<{
   success: boolean;
@@ -29,6 +30,8 @@ export async function testNotionConnection(): Promise<{
     const notion = getNotionClient();
     
     // Try to list users to test the connection
+    // Note: This requires appropriate permissions. If it fails due to permissions,
+    // it may indicate the connection works but lacks specific scopes.
     const response = await notion.users.list({});
     
     return {
