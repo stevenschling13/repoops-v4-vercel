@@ -1,20 +1,44 @@
 # Full CI workflow
-- name: "Full CI Pipeline"
-  on
-    pull_request:
-      branches: [main]
+name: "Full CI Pipeline"
 
-  jobs:
-    - name: Checks and lnt
-      run: npm run lnt
-    - name: Type check
-      run: ntc --version
-    - name: Run tests
-      run: npm test
-    - name: Build project
-      run: ntc build
+on:
+  pull_request:
+    branches: [main]
 
-    - name: Deploy to Vercel
-      environment:
-        VERCEL_TOKEN= {{secret.VERCEL_TOKEN}}
-      run: vercel
+jobs:
+  checks_and_lint:
+    name: Checks and lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci --no-audit --no-fund
+      - run: npm run lint
+  
+  type_check:
+    name: Type check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci --no-audit --no-fund
+      - run: npm run typecheck
+  
+  build:
+    name: Build project
+    runs-on: ubuntu-latest
+    needs: [checks_and_lint, type_check]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
