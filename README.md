@@ -8,6 +8,40 @@ Fully automated and verified by RepoOps Engineer v4 vercel workflow bots.
 
 This repo links to a Vercel-backed automation flow to evaluate, refine, and deploy repositories safely.
 
+## AI-Powered Development
+
+This project can benefit from AI coding assistants like GitHub Copilot and OpenAI Codex. See **[CODEX_USAGE.md](./CODEX_USAGE.md)** for a comprehensive guide on:
+- How to use Codex effectively with this project
+- Code generation, refactoring, and debugging techniques
+- Best practices and security considerations
+- Common use cases and examples
+
+### Quick Start with Codex
+
+Here are some example prompts you can use with AI coding assistants:
+
+**Generate Components:**
+```
+Create a TypeScript React component for a navigation menu styled with Tailwind dark mode
+```
+
+**Fix Issues:**
+```
+Fix the TypeScript error in [filename] and ensure proper type safety
+```
+
+**Add Features:**
+```
+Add form validation to the contact form with error messages using Next.js 14 patterns
+```
+
+**Optimize Code:**
+```
+Refactor this component to improve performance and follow React best practices
+```
+
+For detailed examples and workflows, see [CODEX_USAGE.md](./CODEX_USAGE.md).
+
 \n## Setup
 ***Preview at: <https://repoops-v4-vercel-vwsj.vercel.app/**
 
