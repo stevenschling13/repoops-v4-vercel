@@ -16,7 +16,7 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="bg-zinc-950 text-zinc-100">
+    <html className="bg-zinc-950 text-zinc-100" lang="en">
       <body className={inter.className}>{children}</body>
     </html>
   );
